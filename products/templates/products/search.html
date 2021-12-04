@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+
+{% block content %}
+</br>
+<h1> Search Results </h1>
+<ul>
+{% for product in object_list %}
+<div class="row pt-5">
+    <div class="col-1">
+    <img src="{{ product.icon.url }}" class="img-fluid" />
+    </div>
+        <div class="col-7" style="cursor: pointer;">
+        <a href="{% url 'detail' product.id %}"><h2>{{ product.title }}</h2></a>
+        <p>{{ product.summary }}</p>
+        </div>
+</div>
+{% endfor %}
+</ul>
+
+{% endblock %}
