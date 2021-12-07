@@ -4,11 +4,11 @@
 
 {% for product in products.all %}
 <div class="row pt-5">
-    <div class="col-2">
+    <div class="col-1">
         <img src="{{ product.icon.url }}" class="img-fluid" />
     </div>
         <div class="col-7">
-            <a href="{% url 'detail' product.id %}"><h1>{{ product.title }}</h1></a>
+            <a href="{% url 'detail' product.id %}"><h2>{{ product.title }}</h2></a>
             <p>{{ product.summary }}</p>
         </div>
         <div class="col-3">
